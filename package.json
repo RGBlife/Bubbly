@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www.js localhost 8080"
   },
   "type": "module",
   "dependencies": {
@@ -14,6 +14,7 @@
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "mustache": "^4.2.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
   }
 }
