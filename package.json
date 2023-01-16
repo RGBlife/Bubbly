@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www.js localhost 8080"
+    "start": "nodemon ./bin/www.js localhost 8080",
+    "test": "nodemon"
   },
   "type": "module",
   "dependencies": {
