@@ -8,7 +8,6 @@ import url from 'url'
 
 // Importing routers
 import indexRouter from './src/routes/index.js';
-import usersRouter from './src/routes/users.js';
 
 export const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
@@ -30,4 +29,3 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
