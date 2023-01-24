@@ -17,8 +17,19 @@ export const server = http.createServer(app);
 // Socket io
 export const io = new Server(server);
 
+const colours = ['orange', 'red', 'yellow', 'teal']
+
 io.on("connection", (socket) => {
-  socket.emit("message", "Testing Message");
+  const name = colours.splice(Math.floor(Math.random() * (colours.length - 1)), 1) ?? '[No colours left bobby]'
+  socket.emit("message", "You are connected");
+
+  socket.on('message', (message) => {
+    io.sockets.emit('message', message, name)
+  })
+
+  socket.on('disconnect', () => {
+    colours.push(name)
+  })
 });
 
 /**

@@ -6,3 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
+
+.chatbox {
+  border: cadetblue solid;
+  color: aliceblue;
+  height: 100%;
+  width: 100%;
+}
+
+.textbox-wrapper {
+  display: flex;
+  color: aliceblue;
+}
+
+.message {
+  color: rgb(27, 27, 27);
+  padding: 14px 10px;
+  border-radius: 4px;
+  border: 2px solid rgb(138, 138, 138);
+  margin: 10px 16px;
+  display: inline-block;
+}
