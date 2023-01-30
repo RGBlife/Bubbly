@@ -24,3 +24,16 @@ msgButton.addEventListener("click", (event) => {
   console.log('text', text)
   socket.emit('message', text)
 });
+
+//load button/textbox and allow to submit text by pressing enter
+window.onload = function() {
+  var textInput = document.getElementById("textInput");
+  var msgbtn = document.getElementById("msgBtn");
+
+  textInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      msgbtn.click();
+    }
+  });
+};
