@@ -3,27 +3,60 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 a {
   color: #00B7FF;
 }
 
+.chatbox-wrapper {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
 .chatbox {
-  border: cadetblue solid;
+  display: block;
   color: aliceblue;
-  height: 100%;
+  height: 85%;
   width: 100%;
+  padding: 15px;
+  background-color: #f7f7f7;
+  overflow-y: scroll;
+}
+
+.textbox {
+  cursor: text;
 }
 
 .textbox-wrapper {
-  display: flex;
-  color: aliceblue;
+  overflow: hidden;
 }
 
+
 .message {
+  width: max-content;
   color: rgb(27, 27, 27);
   padding: 14px 10px;
-  border-radius: 4px;
-  border: 2px solid rgb(138, 138, 138);
   margin: 10px 16px;
-  display: inline-block;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+input[type="text"] {
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
