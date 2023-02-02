@@ -43,3 +43,8 @@ window.onload = () => {
     }
   })
 }
+
+socket.on("clearToaster", function() {
+  toastr.clear();
+});
+

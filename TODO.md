@@ -12,9 +12,13 @@
 - [ ] Onload cursor on chatbot ready to enter
 ## Finished Product:
 - [ ] Better overall styling
-- [ ] Message from other users appear on the right side of the chatbox
+- [ ] Message from other users appear on the left side of the chatbox and have own message a different colour
+- [ ] Chatbox appear to show that you are typing
 - [ ] Button to insert emojis & upload an image (maybe)
 - [ ] Banner at the top with an icon, name of room, images of users
+- [ ] Collasped default profile images next to each other with a number of people below this to showcase how many people are connected
+- [ ] Datestamp under every message
+- [ ] Default profile image with svg, filled with a different colour depending on what color you connect as
 ## Maybe:
 - [ ] Database with users
 - [ ] Different chatrooms section
