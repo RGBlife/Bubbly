@@ -3,14 +3,18 @@
 <head>
   <title>Express</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="/socket.io/socket.io.js"></script>
 </head>
 
 <body>
-  <h1>Bubbly Chat App</h1>
+  <h1 class="text-2xl mb-2 font-bold font-mono">Bubbly Chat App</h1>
   <div class="chatbox-wrapper">
-    <div class="chatbox"></div>
-    <input id="textInput" type="text" class="textbox"></input>
+    <div class="toast" id="toast">
+      <p id="toast-message"></p>
+    </div>
+    <div class="chatbox" id="chatbox"></div>
+    <input id="textInput" type="text" class="textbox" value="Enter Your Message Here..."></input>
   </div>
   <button id="msgBtn" class="message-button" style="display: none;">Submit</button>
   <script src="/javascripts/clientside.js"></script>

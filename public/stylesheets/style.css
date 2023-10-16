@@ -14,29 +14,31 @@ a {
 }
 
 .chatbox-wrapper {
+  position: relative;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 }
 
 .chatbox {
-  display: block;
+  display: inline-block;
+  /* display: block; */
   color: aliceblue;
   height: 85%;
   width: 100%;
   padding: 15px;
   background-color: #f7f7f7;
   overflow-y: scroll;
+  overflow-wrap: normal;
 }
 
 .textbox {
   cursor: text;
+  color: gray;
 }
 
 .textbox-wrapper {
   overflow: hidden;
 }
-
 
 .message {
   width: max-content;
@@ -49,7 +51,6 @@ a {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-
 input[type="text"] {
   padding: 10px 15px;
   border: none;
@@ -59,4 +60,21 @@ input[type="text"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.toast {
+  background-color: lightgray;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 45%;
+  top: 20px;
+  transform: translateY(-500px);
+  transition: transform 0.5s ease-in-out;
+  width: 200px;
+}
+
+.toast.show {
+  transform: translateY(0);
 }
