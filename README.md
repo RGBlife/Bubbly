@@ -41,7 +41,7 @@ Bubbly is a basic real-time messaging app, facilitating instant communication be
 
 1. Start the server:
     ```bash
-    npm start
+    npm run start
     ```
 
 2. Open your browser and visit:
