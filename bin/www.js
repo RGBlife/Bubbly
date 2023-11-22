@@ -1,51 +1,50 @@
 // App set-up
-import { app } from '../app.js'
-import { normalizePort, onError, onListening } from '../src/helpers.js'
-import http from 'http'
+import { app } from "../app.js";
+import { normalizePort, onError, onListening } from "../src/helpers.js";
+import http from "http";
 import { Server } from "socket.io";
 
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
+const port = normalizePort(process.env.PORT || "3000");
+app.set("port", port);
 
 // Create HTTP server.
 export const server = http.createServer(app);
 
 export const io = new Server(server);
 
-const colours = ['Orange', 'Red', 'Yellow', 'Teal']
-
+const colours = ["Orange", "Red", "Yellow", "Teal"];
 
 io.on("connection", (socket) => {
-  const name = colours.splice(Math.floor(Math.random() * (colours.length - 1)), 1)[0] ?? '[No colours left bobby]'
-  socket.emit('connectionMsg', `You are connected as ${name}`);
+  const name =
+    colours.splice(Math.floor(Math.random() * (colours.length - 1)), 1)[0] ??
+    "[No colours left bobby]";
+  socket.emit("connectionMsg", `You are connected as ${name}`);
   console.log(`User connected: ${socket.id}`);
-  
-  socket.on('message', async (message, userId) => {
+
+  socket.on("message", async (message, userId) => {
     const sockets = await io.fetchSockets();
-    for(const sock of sockets) {
+    for (const sock of sockets) {
       if (message && sock.id !== socket.id) {
-        sock.emit('message', message, name)
+        sock.emit("message", message, name);
       }
     }
   });
-  
-  
-  socket.on('disconnect', () => {
-    colours.push(name)
+
+  socket.on("disconnect", () => {
+    colours.push(name);
     console.log(socket.id);
-  })
+  });
 });
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+server.on("error", onError);
+server.on("listening", onListening);
 
 // note
 // sending to individual socketid (server-side)
