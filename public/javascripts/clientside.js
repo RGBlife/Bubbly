@@ -64,7 +64,7 @@ window.onload = () => {
   const msgbtn = document.getElementById("msgBtn");
 
   textInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && textInput.value) {
       event.preventDefault();
       msgbtn.click();
       textInput.value = "";
