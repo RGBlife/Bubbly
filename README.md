@@ -13,7 +13,6 @@ Bubbly is a basic real-time messaging app, facilitating instant communication be
   - [Installation](#installation)
   - [Usage](#usage)
   - [Future Plans](#future-plans)
-  - [Contributing](#contributing)
   - [License](#license)
 
 ## Features
@@ -54,10 +53,6 @@ Bubbly is a basic real-time messaging app, facilitating instant communication be
 ## Future Plans
 - **User Login System**: An authentication system to manage user sessions.
 - **Hosting**: Plans to host the application online for broader access and usability.
-
-## Contributing
-
-Contributions are welcomed! Fork the repository, create a new branch, make your changes, and open a pull request.
 
 ## License
 
