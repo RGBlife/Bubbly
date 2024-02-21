@@ -1,9 +1,9 @@
 import { app } from "../app.js";
-import { normalizePort, onError, onListening } from "../src/helpers.js";
+import { normalisePort, onError, onListening } from "../src/helpers.js";
 import http from "http";
 import { Server } from "socket.io";
 
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalisePort(process.env.PORT || "3000");
 app.set("port", port);
 
 export const server = http.createServer(app);
@@ -15,7 +15,7 @@ const colours = ["Orange", "Red", "Yellow", "Teal"];
 io.on("connection", (socket) => {
   const name =
     colours.splice(Math.floor(Math.random() * (colours.length - 1)), 1)[0] ??
-    "[No colours left bobby]";
+    "[No colours left]";
   socket.emit("connectionMsg", `You are connected as ${name}`);
 
   console.log(`User connected: ${socket.id}`);

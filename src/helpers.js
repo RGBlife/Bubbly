@@ -8,7 +8,7 @@ const debug = debugImport('bubbly:server')
  * Normalize a port into a number, string, or false.
  */
 
-export function normalizePort(val) {
+export function normalisePort(val) {
   const port = parseInt(val, 10);
 
   if (isNaN(port)) {

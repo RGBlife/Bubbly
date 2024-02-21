@@ -51,8 +51,8 @@ Bubbly is a basic real-time messaging app, facilitating instant communication be
 3. Begin engaging in real-time conversations!
 
 ## Future Plans
-- **User Login System**: An authentication system to manage user sessions.
-- **Hosting**: Plans to host the application online for broader access and usability.
+- **Hosting**: Plans to host the application online for broader access and usability - DONE
+- **User Login System**: An authentication system to manage user sessions
 
 ## License
 
